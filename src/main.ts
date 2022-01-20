@@ -12,6 +12,7 @@ async function run(): Promise<void> {
 
     process.env.HEROKU_API_KEY = heroku_api_key
     const hr = await heroku.run(['config:get', config_key, '-a', app_name])
+    core.debug(`hr: ${hr}`)
 
     core.setOutput('time', new Date().toTimeString())
   } catch (error) {
