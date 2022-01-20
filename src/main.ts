@@ -1,14 +1,17 @@
 import * as core from '@actions/core'
-import {wait} from './wait'
+import * as heroku from 'heroku'
 
 async function run(): Promise<void> {
   try {
-    const ms: string = core.getInput('milliseconds')
-    core.debug(`Waiting ${ms} milliseconds ...`) // debug is only output if you set the secret `ACTIONS_STEP_DEBUG` to true
+    const heroku_api_key = core.getInput('heroku_api_key')
+    core.debug(`heroku_api_key: ${heroku_api_key}`)
+    const app_name = core.getInput('app_name')
+    core.debug(`app_name: ${app_name}`)
+    const config_key = core.getInput('config_key')
+    core.debug(`config_key: ${config_key}`)
 
-    core.debug(new Date().toTimeString())
-    await wait(parseInt(ms, 10))
-    core.debug(new Date().toTimeString())
+    process.env.HEROKU_API_KEY = heroku_api_key
+    const hr = await heroku.run(['config:get', config_key, '-a', app_name])
 
     core.setOutput('time', new Date().toTimeString())
   } catch (error) {

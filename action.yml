@@ -1,11 +1,16 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: Get Heroku config variable
+description: Given an env key, gets the value from Heroku
+author: 'Connor Walsh (@wconnorwalsh)'
 inputs:
-  milliseconds: # change this
+  heroku_api_key:
+    description: API key from secrets.HEROKU_API_KEY
     required: true
-    description: 'input description here'
-    default: 'default value if applicable'
+  app_name:
+    description: Heroku app name
+    required: true
+  config_key:
+    description: Heroku config variable
+    required: true
 runs:
   using: 'node12'
   main: 'dist/index.js'
