@@ -23,5 +23,5 @@ jobs:
       - uses: ./
         with:
           heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
-          app_name: 'purposity'
-          config_key: 'DATABASE_URL'
+          app_name: purposity
+          config_key: MAX_THREADS

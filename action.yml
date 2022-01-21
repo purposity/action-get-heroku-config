@@ -11,6 +11,9 @@ inputs:
   config_key:
     description: Heroku config variable
     required: true
+outputs:
+  config_value:
+    description: Value of the Heroku app's config variable
 runs:
   using: 'node12'
   main: 'dist/index.js'
