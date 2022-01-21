@@ -11,7 +11,7 @@
     "format-check": "prettier --check '**/*.ts'",
     "lint": "eslint src/**/*.ts",
     "package": "ncc build --source-map --license licenses.txt",
-    "test": "echo 'No tests exist' && exit 1",
+    "test": "echo 'No tests exist' && exit 0",
     "build:dev": "node -r esbuild-register src/main.ts",
     "all": "npm run clean:outputs && npm run build && npm run format && npm run lint && npm run package && npm test"
   },
