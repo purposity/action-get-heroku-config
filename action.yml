@@ -15,5 +15,5 @@ outputs:
   config_value:
     description: Value of the Heroku app's config variable
 runs:
-  using: 'node12'
+  using: 'node16'
   main: 'dist/index.js'
