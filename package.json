@@ -2,7 +2,7 @@
   "name": "@purposity/action-get-heroku-config",
   "version": "1.0.0",
   "private": true,
-  "description": "GitHub action that gets a config variable from a Heroku app",
+  "description": "GitHub Action to get a config var from a Heroku app",
   "main": "lib/main.js",
   "scripts": {
     "build": "tsc",
@@ -17,14 +17,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/actions/typescript-action.git"
+    "url": "git+https://github.com/purposity/action-get-heroku-config.git"
   },
   "keywords": [
     "actions",
     "node",
     "setup"
   ],
-  "author": "",
+  "author": {
+    "name": "Connor Walsh",
+    "url": "https://github.com/wconnorwalsh"
+  },
   "license": "MIT",
   "dependencies": {
     "@actions/core": "^1.6.0",

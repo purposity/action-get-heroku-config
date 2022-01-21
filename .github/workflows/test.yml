@@ -24,8 +24,5 @@ jobs:
         id: get-config-variable
         with:
           heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
-          app_name: purposity
-          config_key: MAX_THREADS
-      - name: Prove we got it
-        run: |
-          echo ${{ steps.get-config-variable.outputs.config_value }}
+          app_name: ${{ secrets.HEROKU_APP_NAME }}
+          config_key: ${{ secrets.HEROKU_CONFIG_KEY }}
