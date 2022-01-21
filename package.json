@@ -1,6 +1,6 @@
 {
   "name": "@purposity/action-get-heroku-config",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "description": "GitHub action that gets a config variable from a Heroku app",
   "main": "lib/main.js",
